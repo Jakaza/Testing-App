@@ -6,7 +6,7 @@ const app = exprees()
 const port = 3000
 
 app.get('/', (req, res) => {
-    res.json({ message: "view users at <http://localhost:3000/users> URL" })
+    res.sendFile("views/index.html")
 })
 
 app.get('/users', function (req, res) {
