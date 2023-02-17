@@ -1,4 +1,5 @@
 const { json } = require("express")
+const path = require("path")
 
 const exprees = require('express')
 const app = exprees()
@@ -6,8 +7,10 @@ const app = exprees()
 const port = 3000
 
 app.get('/', (req, res) => {
-    res.sendFile("views/index.html")
+    res.sendFile(path.join(__dirname, "views/index.html"))
 })
+
+
 
 app.get('/users', function (req, res) {
     const users = [
